@@ -3,6 +3,7 @@ client_id = 'client_id_here'
 client_secret = 'client_secret_here'
 access_token = 'access_token_here'
 base_url = 'base_url_here'
+name = 'botname'
 
 # Misc config stuff
 time_gap = 15 # The time the bot waits before tallying votes (if no votes are detected, it waits this period again)
