@@ -37,7 +37,7 @@ if __name__ == '__main__':
     while True:
         time.sleep(15)
         replies = filter((lambda x: x['type'] == 'mention' and (arrow.get(x['created_at']) - tootTime).seconds <= toWait), client.notifications()) # Find mentions sent in the last `toWait` seconds
-        options = [naughty.replace(bs(i['status']['content'], 'html.parser').p.text.split('@adventure ')[1]) for i in replies] # I'm sorry.
+        options = [naughty.replace(bs(i['status']['content'], 'html.parser').p.text.split('@' + config.name + ' ')[1]) for i in replies] # I'm sorry.
         if len(options) != 0:
             command = Most_Common(options)
             response = t.execute_command(str(command[0]))
