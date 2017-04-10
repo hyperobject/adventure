@@ -12,7 +12,7 @@ from bs4 import BeautifulSoup as bs
 # Function definitions - you shouldn't have to modify these.
 def Most_Common(lst):
     data = Counter(lst)
-    return (data.most_common(1)[0][0], (str(int(100 * data.most_common(1)[0][1]/sum(data.values()))) + "%")) # (actual command, percentage of votes this command received)
+    return (data.most_common(1)[0][0], str(data.most_common(1)[0][1]) + ' votes') # (actual command, percentage of votes this command received)
 
 def sendToot(message, api):
     if len(message) > 500:
